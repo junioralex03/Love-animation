@@ -1,0 +1,276 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+canvas {
+	background-color: #000000;
+}
+
+.logo {
+	position: absolute;
+	display: inline-block;
+	background-repeat: no-repeat;
+	right: 0;
+	bottom: 0;
+	width: 160px;
+	height: 60px;
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/createjs-badge.png");
+}
+
+.logo.top {
+	top: 0;
+}
+
+.logo.left {
+	left: 0;
+}
+
+.logo.white {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/createjs-badge-reverse.png");
+}
+
+.logo.blue {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/createjs-badge-blue.png");
+}
+
+.logo.site {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/createjs-badge-light.png");
+}
+
+.logo.site.reverse {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/createjs-badge-dark.png");
+}
+
+#badges {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	pointer-events: none;
+}
+
+#badges.jam {
+	bottom: 50px;
+}
+
+#badges.right {
+	right: 10px;
+	left: auto;
+}
+
+#badges.top {
+	top: 10px;
+	bottom: auto;
+}
+
+#badges.top.jam {
+	top: 50px;
+}
+
+.badge {
+	display: inline-block;
+	width: 60px;
+	height: 70px;
+	background-repeat: no-repeat;
+}
+
+.badge.click {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Click_Black.svg");
+}
+
+.badge.click.blacker {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Click_Black_HighOpc_1.svg");
+}
+
+.badge.click.blackest {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Click_Black_HighOpc.svg");
+}
+
+.badge.click.white {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Click_White.svg");
+}
+
+.badge.click.whiter {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Click_White_HighOpc.svg");
+}
+
+.badge.click.whitest {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Click_White_HighOpc_1.svg");
+}
+
+.badge.drag {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Drag_Black.svg");
+}
+
+.badge.drag.white {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Drag_White.svg");
+}
+
+.badge.follow {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Follow_Black.svg");
+}
+
+.badge.follow.white {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Follow_White.svg");
+}
+
+.badge.hold {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Hold_Black.svg");
+}
+
+.badge.hold.white {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Hold_White.svg");
+}
+
+.badge.move {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Move_Black.svg");
+}
+
+.badge.move.white {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Move_White.svg");
+}
+
+.badge.sound {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Sound_Black.svg");
+}
+
+.badge.sound.white {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Sound_White.svg");
+}
+
+.badge.swipe {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Swipe_Black.svg");
+}
+
+.badge.swipe.white {
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/Button_Swipe_White.svg");
+}
+
+.lockup {
+	position: absolute;
+	border-radius: 3px;
+	padding: 3px;
+	background: #000;
+	transform: translateY(-100%);
+	right: 6px;
+	white-space: nowrap;
+	display: none;
+}
+
+.lockup.show {
+	display: block;
+}
+
+.lockup::before {
+	content: "";
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	transform: translateY(-3px) translateX(-50%) rotate(180deg);
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #000;
+}
+
+.logo.top .lockup {
+	top: 100%;
+	transform: translateX(0);
+}
+
+.logo.top .lockup::before {
+	top: 0;
+	transform: translateX(-50%) translateY(-100%);
+}
+
+.logo.white .lockup {
+	background-color: white;
+}
+
+.logo.white .lockup::before {
+	border-bottom-color: #fff;
+}
+
+.logo.white .lib {
+	color: black;
+}
+
+.lib {
+	display: inline-block;
+	position: relative;
+	padding-left: 22px;
+	padding-right: 3px;
+	line-height: 21px;
+	font-family: Helvetica, Arial, Sans-serif;
+	font-size: 9px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-right: 6px;
+}
+
+.lib:last-child {
+	margin-right: auto;
+}
+
+.lib::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 3px;
+	left: 3px;
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/logo-spritesheet.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	float: left;
+}
+
+.lib.easeljs::after {
+	background-position: -16px;
+}
+
+.lib.tweenjs::after {
+	background-position: -32px;
+}
+
+.lib.preloadjs::after {
+	background-position: -48px;
+}
+
+.lib.soundjs::after {
+	background-position: -64px;
+}
+
+.logo.verbose .lib {
+	white-space: nowrap;
+	display: block;
+}
+
+.logo.verbose .lib::before {
+	content: "CreateJS";
+	margin-right: 2px;
+}
+
+.logo.verbose .lib.easeljs::before {
+	content: "EaselJS";
+}
+
+.logo.verbose .lib.tweenjs::before {
+	content: "TweenJS";
+}
+
+.logo.verbose .lib.preloadjs::before {
+	content: "PreloadJS";
+}
+
+.logo.verbose .lib.soundjs::before {
+	content: "SoundJS";
+}
