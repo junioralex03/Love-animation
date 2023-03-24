@@ -27,11 +27,9 @@
     <div>
       <canvas id="testCanvas" width="1747" height="904"></canvas>
     </div>
-    <a href="https://createjs.com/" target="_blank"
-      ><div class="logo white">
-        <div class="lockup"><div class="lib easeljs">1.0.0</div></div>
-      </div></a
-    >
+   <div class="logo white">
+    <h1>hola</h1>
+     
     <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.download"></script>
 
     <script src="./easeljs.min.js.download"></script>
@@ -84,7 +82,17 @@
           container.addChild(heart);
         }
         window.CP.exitedLoop(0);
-
+//otro texto aariba
+var text1 = new createjs.Text(
+          "De Junior para\nNathy",
+          "bold 30px Arial",
+          "#ffffff"
+        );
+        text1.textAlign = "center";
+        text1.x = w / 2;
+        text1.y = h / 6 - text1.getMeasuredLineHeight();
+        stage.addChild(text1);
+//
         var text = new createjs.Text(
           "The longer I'm with you\nThe more I love you",
           "bold 42px Arial",
